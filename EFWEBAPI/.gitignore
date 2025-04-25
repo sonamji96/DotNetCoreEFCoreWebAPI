@@ -1,1 +1,74 @@
+## Ignore Visual Studio temporary files, build results, and
+## user-specific files
+
+# Build results
+bin/
+obj/
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Rider project files
+.idea/
+
+# Visual Studio Code settings
+.vscode/
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+# DotCover
+*.dotCover
+
+# Logs
+*.log
+
+# Auto-generated files
+Generated_Code/
+
+# Publish directory
+publish/
+
+# .NET Core specific
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# IIS Express
 .vs/
+*.vspscc
+*.vssscc
+*.dbmdl
+
+# NuGet
+*.nupkg
+# The packages folder can be ignored because of PackageReference
+**/packages/*
+!**/packages/build/
+!**/packages/repositories.config
+
+# Resharper
+_ReSharper*/
+*.DotSettings.user
+
+# Coverage results
+coverage/
+*.coverage
+*.coveragexml
+
+# Others
+*.tgz
+*.zip
+*.tmp
+*.bak
+*.swp
+
+# Secrets
+secrets.json
+
+# Mac/Linux
+.DS_Store
+*.sw?
