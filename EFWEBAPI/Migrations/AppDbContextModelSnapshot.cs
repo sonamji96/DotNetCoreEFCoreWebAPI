@@ -74,7 +74,12 @@ namespace EFWEBAPI.Migrations
                     b.Property<int>("CurrencyId")
                         .HasColumnType("int");
 
+                    b.Property<int?>("CurrencyTypeid")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
+
+                    b.HasIndex("CurrencyTypeid");
 
                     b.ToTable("BookPrice");
                 });
@@ -182,6 +187,18 @@ namespace EFWEBAPI.Migrations
                         .IsRequired();
 
                     b.Navigation("Language");
+                });
+
+            modelBuilder.Entity("EFWEBAPI.Data.BookPrice", b =>
+                {
+                    b.HasOne("EFWEBAPI.Data.CurrencyType", null)
+                        .WithMany("BookPrices")
+                        .HasForeignKey("CurrencyTypeid");
+                });
+
+            modelBuilder.Entity("EFWEBAPI.Data.CurrencyType", b =>
+                {
+                    b.Navigation("BookPrices");
                 });
 
             modelBuilder.Entity("EFWEBAPI.Data.Language", b =>
